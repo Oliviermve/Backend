@@ -78,4 +78,6 @@ python3 manage.py migrate
 
 3. lancer le serveur
 
+python3 manage.py runserver
+
 
