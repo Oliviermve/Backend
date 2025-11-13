@@ -2,6 +2,12 @@
 backend porfolioX
 
 
+### Prérequis
+- Python 3.8+
+- Django 4.2+
+- Django REST Framework + simple JWT token 
+
+
 # Architectire modulaire Backend
 
 Backend_PortfolioX/
@@ -56,12 +62,26 @@ Backend_PortfolioX/
 - `nom_template`, `description_template`
 - `fichier_html`, `image_template`
 
+## Sécurité Implémentée
+
+Mesures de protection :
+
+    Mots de passe hashés (bcrypt)
+
+    Tokens JWT avec expiration
+
+    Blacklisting des tokens révoqués
+
+    Validation CORS pour le frontend
+
+    Protection CSRF pour sessions
+
+    Rate limiting possible
+
+
 ## 🚀 Installation et Démarrage
 
-### Prérequis
-- Python 3.8+
-- Django 4.2+
-- Django REST Framework
+
 
 ### Installation
 
@@ -75,9 +95,17 @@ cd Backend_PortfolioX
 python3 manage.py makemigrations
 python3 manage.py migrate
 
+3. creer un super utilisateur(Administrateur)
 
-3. lancer le serveur
+python3 manage.py createsuperuser
+
+4. lancer le serveur
 
 python3 manage.py runserver
+
+
+5. dans le navigateur lancer lancer l'URL en ajoutant /api/  pour voir toute les endpoints disponible
+
+exemple http://127.0.0.1:8000/api/
 
 
