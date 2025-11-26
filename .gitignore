@@ -1,22 +1,20 @@
-# Django
-*.pyc
+# Python
 __pycache__/
+*.pyc
 *.pyo
 *.pyd
 .Python
-env/
+
+# Django
+db.sqlite3
+*.log
+staticfiles/
+media/
+
+# Environment
+.env
 venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Database
-*.sqlite3
-*.db
-
-# Static files
-/staticfiles/
-/media/
+env/
 
 # IDE
 .vscode/
@@ -27,14 +25,3 @@ venv.bak/
 # OS
 .DS_Store
 Thumbs.db
-
-# Logs
-*.log
-
-# Environment variables
-.env
-.env.local
-.env.production
-
-# Fixtures (optionnel - si vous voulez les garder, retirez cette ligne)
-portfolio/fixtures/
