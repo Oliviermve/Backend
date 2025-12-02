@@ -34,6 +34,7 @@ pip install -r requirements.txt
 bash
 
 python3 manage.py makemigrations
+
 python3 manage.py migrate
 
 # 3. Créer un superutilisateur (optionnel)
